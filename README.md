@@ -2,5 +2,5 @@
 An introductory course on Node JS
 
 ```
-node syntax/control.js
+node syntax/data-structures.js
 ```
