@@ -2,5 +2,5 @@
 An introductory course on Node JS
 
 ```
-node sync-async/promises/advanced
+node sync-async/async-await/advanced
 ```
