@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-school",
+  "version": "1.0.0",
+  "description": "An introductory course on Node JS",
+  "main": "index.js",
+  "author": "Felipe Polo Ruiz <felipe.polo@gmail.com> (https://github.com/feliun)",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0"
+  }
+}
