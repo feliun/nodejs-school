@@ -1,7 +1,6 @@
 const initApp = require('./initApp');
-const controller = require('..');
 
-module.exports = ({ app, config }) => {
+module.exports = ({ app, config, controller }) => {
 
   let server;
 

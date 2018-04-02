@@ -2,12 +2,10 @@
 An introductory course on Node JS
 
 ```
-npm i // new dependencies
+npm i
+node ./streams/create-large-file
 npm run start
-curl http://localhost:8080/v1/sync/add/1/5
-curl http://localhost:8080/v1/sync/multiply/3/7
-curl http://localhost:8080/v1/async/callback/add/3/4
-curl http://localhost:8080/v1/async/callback/audit
-curl http://localhost:8080/v1/async/promise/add/3/4
-curl http://localhost:8080/v1/async/promise/audit
+curl http://localhost:8080/v1/async/stream/slow-audit
+curl http://localhost:8080/v1/async/stream/fast-audit
+curl -X POST http://localhost:8080/v1/async/stream/copy-audit
 ```

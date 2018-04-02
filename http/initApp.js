@@ -1,5 +1,7 @@
 const bodyparser = require('body-parser');
 const debug = require('debug')('nodejs-school:calculator');
+const fs = require('fs');
+const zlib = require('zlib');
 const { join } = require('path');
 
 module.exports = (app, config, controller) => {
@@ -50,5 +52,29 @@ module.exports = (app, config, controller) => {
 
     app.get('/v1/async/promise/audit', (req, res) => {
       res.sendFile(join(__dirname, '..', 'audit-promises.txt'));
+    });
+
+    app.get('/v1/async/stream/slow-audit', (req, res) => {
+      fs.readFile(join(__dirname, '..', 'massive.txt'), (err, data) => {
+        if (err) throw err;
+        res.end(data);
+      });
+    });
+
+    app.get('/v1/async/stream/fast-audit', (req, res) => {
+      const src = fs.createReadStream(join(__dirname, '..', 'massive.txt'));
+      src.pipe(res);
+    });
+
+    app.post('/v1/async/stream/copy-audit', (req, res) => {
+      const src = fs.createReadStream(join(__dirname, '..', 'massive.txt'));
+      src
+      .on('data', () => process.stdout.write('.'))
+      .pipe(zlib.createGzip())
+      .pipe(fs.createWriteStream('massive.zz'))
+      .on('finish', () => {
+        console.log('Done');
+        res.sendStatus(200);
+      });
     });
 };

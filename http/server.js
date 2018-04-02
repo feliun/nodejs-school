@@ -1,6 +1,7 @@
 const express = require('express');
-var cors = require('cors')
+const cors = require('cors')
 
+const controller = require('..');
 const initSystem = require('./system');
 
 const app = express();
@@ -12,7 +13,7 @@ const config = {
   }
 };
 
-const system = initSystem({ app, config });
+const system = initSystem({ app, config, controller });
 
 system.start()
   .then(() => console.log(`Server listening at localhost:${config.app.port}`))
