@@ -1,0 +1,4 @@
+add(2,3) = 5
+multiply(5,5) = 25
+subtract(25,5) = 20
+multiply(20,2) = 40
