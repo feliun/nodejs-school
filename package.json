@@ -6,13 +6,17 @@
   "author": "Felipe Polo Ruiz <felipe.polo@gmail.com> (https://github.com/feliun)",
   "license": "ISC",
   "scripts": {
+    "start": "node ./http/server",
     "bump-patch": "make bump-patch",
     "bump-minor": "make bump-minor",
     "bump-major": "make bump-major"
   },
   "dependencies": {
     "async": "^2.6.0",
-    "debug": "^3.1.0"
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "semver": "^5.5.0"

@@ -2,21 +2,12 @@
 An introductory course on Node JS
 
 ```
-npm i debug --save
-npm i semver --save-dev
-cat package.json | grep version
-npm run bump-patch
-cat package.json | grep version
-npm run bump-minor
-cat package.json | grep version
-npm run bump-major
-cat package.json | grep version
-cat index.js
-
-node test-module.js
-
-npm login
-npm publish
-
-npm i nodejs-school --save
+npm i // new dependencies
+npm run start
+curl http://localhost:8080/v1/sync/add/1/5
+curl http://localhost:8080/v1/sync/multiply/3/7
+curl http://localhost:8080/v1/async/callback/add/3/4
+curl http://localhost:8080/v1/async/callback/audit
+curl http://localhost:8080/v1/async/promise/add/3/4
+curl http://localhost:8080/v1/async/promise/audit
 ```
