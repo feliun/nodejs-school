@@ -2,5 +2,5 @@
 An introductory course on Node JS
 
 ```
-node sync-async/callbacks/async
+node sync-async/promises/intro
 ```
