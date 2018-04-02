@@ -1,0 +1,3 @@
+add(2,3) = 5
+multiply(5,5) = 25
+subtract(25,3) = 22

@@ -2,5 +2,5 @@
 An introductory course on Node JS
 
 ```
-node sync-async/promises/intro
+node sync-async/promises/audit
 ```
